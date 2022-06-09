@@ -1,38 +1,59 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+
+.square{
+  height: 50px;
+  width: 50px;
+  background: #ddf7f8;
+  border: 1px solid #045256;
+  font-size: 32px;
+  font-weight: 500;
+  float: left;
+  scale: 1;
+} 
+.square:hover{
+  cursor: pointer;
+  background: #9ab8ba;
+  transform: translate(scale(1.2));
+}
+.game{
+  display: flex;  
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+} 
+ .board{
+  margin: 30px;
+}
+.back-btn{
+  margin-top: 20px;
+  padding: 5px 10px;
+  background: #045256;
+  color: #ddf7f8;
+  border-radius: 5px;
+  border: none;
+}
+.info{
+  margin-top: 30px;
+}
+.status{
+  font-weight: 20px;
+  font-weight: bold;
+  padding:0 20px;
+  margin: 10px;
+}
+.turn{
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.history{
+  padding:10px 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.history button {
+  padding: 3px;
+}
+.history li {
+  padding: 3px;
 }
