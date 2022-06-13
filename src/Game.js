@@ -3,6 +3,10 @@ import React, { useState } from 'react'
 const Game = () => {
 
     const [history, setHistory] = useState([{ squares: [...Array(9)].fill(null) }]);
+    // const [history, setHistory] = useState([{ squares: [null,null,null,null,null,null,null,null,null]}]);
+
+    //  both history state is work
+
     console.log('history', history)
 
     const [nextP, setNextP] = useState(true);
@@ -78,34 +82,39 @@ const Game = () => {
 
     const renderSquare = (i) => {
         return (
-            <button key={i} className='square' onClick={() => handleClick(i)} name=" ">{history[stepNo].squares[i]}</button>
-            // <input name="" type="button" className='square' value={history[stepNo].squares[i]} onClick={() => handleClick(i)} />
+            <button key={i} className='transition ease-in-out delay-100 hover:-translate-1 hover:scale-110 h-12 w-12 text-rose-600 border-2 border-black text-2xl font-semibold cursor-pointer shadow-lg shadow-cyan-900/50' onClick={() => handleClick(i)} name=" "><span className="text-white">.</span>{history[stepNo].squares[i]}<span className="text-white">.</span></button>
+        //     <input
+        //         name=""
+        //         type="button"
+        //         className='h-12 w-12 bg-green-200 border-2 border-rose-600 text-2xl font-semibold cursor-pointer'
+        //         value={history[stepNo].squares[i]}
+        //         onClick={() => handleClick(i)} />
         );
     };
     let num = 0;
     return (
-        <div className='game'>
-            <div className='board'>
-                <div className='info'>
-                    <p className='status'>{status()}</p>
+            <div className=''>
+                <div className='text-center font-semibold'>
+                    <p className=''>{status()}</p>
 
-                    <p className='turn'>{turn()}</p>
+                    <p className=''>{turn()}</p>
                 </div>
 
-                <div >
+                <div className='table my-10 mx-auto'>
                     {[...Array(3)].map((e, i) => (
-                        <div className="board-row" key={i}>
+                        <div className="" key={i}>
                             {[...Array(3)].map(() => {
                                 num++;
                                 return renderSquare(num - 1)
                             })}
                         </div>
                     ))}
+                <div className="text-center bg-black text-white border-t-8  "> <button className="py-1 px-2 w-full bg-rose-500 " onClick={undo} >Undo</button></div>
                 </div>
 
-                <button onClick={undo} className="back-btn">back</button>
+                <br /><br /><hr /><br /><br />
+
             </div>
-        </div>
     )
 }
 
