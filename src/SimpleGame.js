@@ -1,6 +1,6 @@
-import './App.css';
+// import './App.css';
 import { useEffect, useState } from 'react'
-import css from './Game.module.css';
+// import css from './Game.module.css';
 
 function SimpleGame() {
 
@@ -195,35 +195,29 @@ function SimpleGame() {
 
   return (
     <>
-      <center style={{ marginTop: "100px" }}>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <input className={css.box} type="button" value={btn1} onClick={Button1} />{" "}
-                <input className={css.box} type="button" value={btn2} onClick={Button2} />{" "}
-                <input className={css.box} type="button" value={btn3} onClick={Button3} /><br />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input className={css.box} type="button" value={btn4} onClick={Button4} />{" "}
-                <input className={css.box} type="button" value={btn5} onClick={Button5} />{" "}
-                <input className={css.box} type="button" value={btn6} onClick={Button6} /><br />
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input className={css.box} type="button" value={btn7} onClick={Button7} />{" "}
-                <input className={css.box} type="button" value={btn8} onClick={Button8} />{" "}
-                <input className={css.box} type="button" value={btn9} onClick={Button9} /><br />
-              </td>
 
-            </tr>
-          </tbody>
-        </table><br />
-        <button onClick={restart}>Restart</button>
-      </center>
+      <div className=' table'>
+
+      </div>
+
+      <div className='table p-1 bg-cyan-900 my-10 mx-auto shadow-lg shadow-cyan-900/50'>
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold rounded-tl-lg " type="button" value={btn1} onClick={Button1} />{" "}
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold" type="button" value={btn2} onClick={Button2} />{" "}
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold rounded-tr-lg " type="button" value={btn3} onClick={Button3} /><br />
+
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold" type="button" value={btn4} onClick={Button4} />{" "}
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold" type="button" value={btn5} onClick={Button5} />{" "}
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold" type="button" value={btn6} onClick={Button6} /><br />
+
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold rounded-bl-lg " type="button" value={btn7} onClick={Button7} />{" "}
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold" type="button" value={btn8} onClick={Button8} />{" "}
+        <input className="bg-cyan-100 border-4 border-cyan-900 h-12 w-12 font-semibold rounded-br-lg " type="button" value={btn9} onClick={Button9} /><br />
+
+        <div className='text-center'>
+          <button onClick={restart} className='my-2 px-3 py-0.5 ring-2 bg-sky-100 ring-sky-900 ring-offset-4 ring-offset-sky-100 text-sky-900 animate-pulse rounded-full'>Restart</button>
+        </div>
+      </div>
+
 
       <br /><br /><hr /><br /><br />
 
